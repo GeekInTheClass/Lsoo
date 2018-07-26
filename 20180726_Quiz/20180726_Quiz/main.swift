@@ -1,4 +1,3 @@
-
 // 1.한국 나이를 기준으로 사람들이 태어난 년도를 구하시오
 
 let age = [20, 55, 36, 29, 13]
@@ -28,8 +27,19 @@ for item in age {
 }
 print(sumOfage)
 
-// 4. 만 19세 초과인 사람들의 나이를 더하시오
+let sumofage = age.reduce(0,{
+    (ret,item)->Int in
+    return ret + item
+})
+print(sumofage)
 
+
+// 4. 만 19세 초과인 사람들의 나이를 더하시오
+let sum19 = filteredAge.reduce(0,{
+    (ret,item)->Int in
+    return ret + item
+})
+print(sum19)
 
 
 
